@@ -1,0 +1,164 @@
+@import url(https://fr.allfont.net/allfont.css?fonts=bullpen-3d);
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+}
+
+#header_nav {
+    height: 140px;
+    line-height: 100px;
+    background: rgba(0, 0, 0, 0.808)
+}
+
+header {
+    position: absolute;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.m-left {
+    float: left;
+}
+
+.m-right {
+    float: right;
+}
+
+.logo {
+    font-family: 'Bullpen 3D', arial;
+    color: yellow;
+    font-size: 50px;
+}
+
+#accueil {
+    font-family: 'Bullpen 3D', arial;
+    color: whitesmoke;
+    background: transparent;
+    padding: 15px 100px;
+    font-size: 25px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+#monPanier {
+    font-family: 'Bullpen 3D', arial;
+    color: whitesmoke;
+    background: transparent;
+    padding: 15px 100px;
+    font-size: 25px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+#accueil:hover {
+    border: 0;
+    box-shadow: 0 0 3px yellow, 0 0 7px yellow, 0 0 20px yellow;
+    border-radius: 15px;
+    color: yellow;
+    text-decoration: none;
+}
+
+#monPanier:hover {
+    border: 0;
+    box-shadow: 0 0 3px yellow, 0 0 7px yellow, 0 0 20px yellow;
+    border-radius: 15px;
+    color: yellow;
+    text-decoration: none;
+}
+
+.inner {
+    width: 80%;
+    margin: auto;
+}
+
+#banner {
+    overflow: hidden;
+    height: 500px;
+}
+
+#footer {
+    height: 300px;
+    background: rgba(0, 0, 0, 0.808)
+}
+
+footer {
+    position: absolute;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#btn_scroll_top {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    bottom: 90px;
+    right: 30px;
+    cursor: pointer;
+}
+
+#btn_scroll_top:hover {
+    border: 0;
+    box-shadow: 0 0 3px yellow, 0 0 7px yellow, 0 0 20px yellow;
+    color: yellow;
+    border-radius: 15px;
+}
+
+.content {
+    height: auto;
+}
+
+#twitter {
+    color: rgba(0, 153, 255, 0.952);
+    size: 10em;
+    position: relative;
+}
+
+#youtube {
+    color: red;
+    size: 100px;
+    position: relative;
+}
+
+#banner_bot {
+    overflow: hidden;
+    height: 300px;
+    width: 100%;
+}
+
+#links {
+    font-family: 'Bullpen 3D', arial;
+    font-size: 30px;
+}
+
+#links:hover {
+    font-family: 'Bullpen 3D', arial;
+    font-size: 30px;
+}
+
+a {
+    color: whitesmoke;
+}
+
+a:hover {
+    color: yellow;
+}
+
+.link {
+    position: relative;
+}
+
+nav ul li {
+    display: inline-block;
+}
