@@ -72,46 +72,24 @@ $('#bookSelect').change(function() {
 })
 
 
+/********************************** EXERCICE *************************************/
+/*
 
+console.log(albums) //permet d'accéder a album dans la console et ouvrir un menu déroulant expliquant le tableau
+console.log(albums.get('8').titre) // Je récupère id 8 de l'album map / .titre = je récupere le titre. Pour récupérer l'album il faut faire une boucle
+console.log(albums.get('8').idAuteur) // Pour chercher l'auteur je récupere son id = (idAuteur) = 10 dans album.js
+var tutu = albums.get('8').idAuteur // Je récupère  id auteur dans une variable. id = tutu
+console.log(auteurs.get(tutu).nom) //plutot que utiliser l'id j'utilise la variable
+console.log(auteurs.get('10').nom) // j'utilise cet id (10) + .nom pour avoir le nom de l'auteur
+var valeurs = $('#id').val() // récupéré le id décidé par l'utilisateur et lui donne une valeur
+console.log(valeurs)
+for (let [key, value] of series) { // boucle qui récupere l'Id et nom de chaque serie
+    console.log(key);
+    console.log(value.nom);
 
+}
 
-
-$('#searchValue').keyup(function () {
-    $('#row_cards').empty();
-
-    /**
-     * @type {string} This variable is to be injected into searchRegex, hence "^" at the beginning.
-     * The variable will receive user's inputs from the #searchValue bar.
-     */
-    let recherche = "^";
-    /**
-     * @type {Object} Regular Expression made to control user input before injecting it
-     * into searchRegex.
-     */
-    let verifSearch = new RegExp('\\b(.*)a(.*)\\b');
-    /**
-     * @type {Object} Dynamically generated regular expression used to find matches in series database
-     */
-    let searchRegex;
-
-    if (verifSearch.test($('#searchValue').val().toLowerCase())) {
-        recherche += $('#searchValue').val().toLowerCase();
-        searchRegex = new RegExp(recherche);
-    }
-    if (recherche != "^") {
-        for (let y = 0; y < series.length; y++ ) {
-            if (searchRegex.test(series[y].nom.toLowerCase())) {
-                $('#row_cards').append('<div class="card" id="item' + i + '"><div class="card-header"><img id="toto" src="' + pathMini + '.jpg" style="width:100%" id="albumMini"></div><div class="card-body"><p id="messageId"></p><span>"' + dspSerie + '" </span><p>Auteur : "' + dspAuthor + '"</><p>Prix :  ' + dspPrice + '€ </p></div><button href="#" id="cards_btn"> Lire plus </button></div>');
-            }
-        }
-        if ($('#row_cards').is(':empty')) {
-            $('#row_cards').append('<h1> Not Found ! </h1>');
-        }
-    }
-    else {
-        defaultAffichage(1);
-    }
-});
+/********************************** EXERCICE FIN *************************************/
 
 
 
@@ -147,22 +125,16 @@ $('#searchValue').keyup(function () {
 
 /*class bd {
     constructor(titre = '', nom = '') {
-
         this.titre = titre
         this.nom = nom
-
         albums.get = function() {
             return titre
         }
         series.get = function() {
             return nom
         }
-
     }
-
-
 /*research() {
-
 }
     $(document).ready(function(e) {
             $('#categoryFilter').keyup(function(e) {
@@ -174,10 +146,65 @@ $('#searchValue').keyup(function () {
                     var span = $(this);
                     var resultats = span.text().match(new RegExp(regexp, 'i'));
                     console.log(resultats)
-
                 })
             })
         }
-
-
     }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*class bd {
+    constructor(item, key) {
+
+        this.titres = titre
+        this.noms = nom
+
+        albums.get = function() {
+            return titres
+        }
+        series.get = function() {
+            return noms
+        }
+    }
+}*/
