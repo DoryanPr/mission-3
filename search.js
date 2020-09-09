@@ -19,38 +19,44 @@ for (let [key, value] of series) { // boucle qui récupere l'Id et nom de chaque
 
 $('#searchValue').keyup(function() {
     $('#row_cards').empty();
-    for (i = 1; i < albums.size; i++) {
-        var album = albums.get("" + i + "");
-    }
-    console.log(album)
-    var serie = albums.get("" + i + "").idSerie
-    var nomSerie = series.get(serie).nom
-    console.log(nomSerie)
-
-    let recherche = "^";
-    let verifSearch = new RegExp('\\b(.*)a(.*)\\b');
-    let searchRegex;
+    albums.forEach(function(album, key) {
 
 
-    if (verifSearch.test($('#searchValue').val().toLowerCase())) {
-        recherche += $('#searchValue').val().toLowerCase();
-        searchRegex = new RegExp(recherche);
-        console.log(series)
 
-    }
-    if (recherche != "^") {
-        for (let y = 0; y < series.size; y++) {
-            console.log(searchRegex)
-            if (searchRegex.test(serie[y].nom.toLowerCase())) {
-                console.log(y)
-                $('#row_cards').append('<div class="card" id="item' + y + '"><div class="card-header"><img id="toto" src="' + pathMini + '.jpg" style="width:100%" id="albumMini"></div><div class="card-body"><p id="messageId"></p><span>"' + dspSerie + '" </span><p>Auteur : "' + dspAuthor + '"</><p>Prix :  ' + dspPrice + '€ </p></div><button href="#" id="cards_btn"> Lire plus </button></div>');
-            }
-        }
-        if ($('#row_cards').is(':empty')) {
-            $('#row_cards').append('<h1> Not Found ! </h1>');
-        }
-    }
-});
+        console.log(albums)
+        var serie = album.idSerie // garder un oeil
+        console.log(serie)
+        var nomSerie = series.get(serie).nom // intéressant
+        console.log(nomSerie)
+        let recherche = "^";
+        let verifSearch = new RegExp('\\b(.*)a(.*)\\b');
+        let searchRegex;
+
+        /*
+                if (verifSearch.test($('#searchValue').val().toLowerCase())) {
+                    recherche += $('#searchValue').val().toLowerCase();
+                    searchRegex = new RegExp(recherche);
+                    console.log(series)
+
+                }
+                if (recherche != "^") {
+                    for (let y = 0; y < series.size; y++) {
+                        console.log(searchRegex)
+                        if (searchRegex.test(serie[y].nom.toLowerCase())) {
+                            console.log(y)
+                            $('#row_cards').append('<div class="card" id="item' + y + '"><div class="card-header"><img id="toto" src="' + pathMini + '.jpg" style="width:100%" id="albumMini"></div><div class="card-body"><p id="messageId"></p><span>"' + dspSerie + '" </span><p>Auteur : "' + dspAuthor + '"</><p>Prix :  ' + dspPrice + '€ </p></div><button href="#" id="cards_btn"> Lire plus </button></div>');
+                        }
+                    }
+                    if ($('#row_cards').is(':empty')) {
+                        $('#row_cards').append('<h1> Not Found ! </h1>');
+                    }
+                }
+            });
+
+        */
+    })
+
+})
 
 
 
@@ -230,6 +236,4 @@ $(document).ready(function() {
             })
 
         })
-    })
-
-*/
+    }) */
